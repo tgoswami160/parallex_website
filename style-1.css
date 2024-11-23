@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    perspective: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    z-index: -1;
+
+    h1 {
+        font-size: 5.2rem;
+        text-shadow: 0px 0px 5px black;
+        color: white;
+        position: absolute;
+        left: 50%;
+        top: 15%;
+        transform: translateX(-50%);
+    }
+
+    .background, .foreground {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .background {
+        transform: translateZ(-20px) scale(3.1);
+    }
+
+    .foreground {
+        transform: translateZ(-10px) scale(2);
+    }
+}
+
+section#content {
+
+    height: 100%;
+    width: 100%;
+
+    .content-details {
+        max-height: 100vh;
+        background-color: rgb(42, 42, 42);
+
+        .details-first-heading {
+            font-size: 2.5rem;
+            padding: 30px 30px;
+            color: white;
+        }
+        
+
+        p {
+            color: white;
+            padding: 50px 30px;
+        }
+
+        .bg-img-fixed {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 300px;
+            width: 100%;
+            background-attachment: fixed;
+            background-position: right top;
+            background-size: cover;
+
+            h2 {
+                font-size: 2rem;
+                background-color: white;
+                padding: 10px 30px;
+            }
+        }
+
+        .cycling {
+            background-image: url(sport-1.jpg);
+        }
+        .paragliding {
+            background-image: url(sport-2.jpg);
+        }
+        .surfing {
+            background-image: url(sport-3.jpg);
+        }
+    }
+
+}
+
